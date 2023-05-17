@@ -157,9 +157,9 @@ def show_exam_result(request, course_id, submission_id):
         request,
         'onlinecourse/exam_result_bootstrap.html',
         {"course":course, "choices":choices,"grade":grade, 
-            "total_score": total_score, 
+            "total_score": round(total_score), 
             "submission": submission,
-            "grade": int((grade / total_score) * 100) }
+            "grade": round((grade / total_score) * 100) }
     )
 
 
